@@ -2,47 +2,74 @@ package com.example.monmanapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button mSendRequestButton;
-    Button mSetCalendarDateButton;
+    //TODO прикрутить действие для кнопки (вызвать вторую активность)
+    //TODO сделать крутилку с объяснениями
+
+
+    private Button letsTryButton;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        System.out.println("CREATED");
 
-        mSendRequestButton = (Button) findViewById(R.id.send_request_button);
-        mSetCalendarDateButton = (Button) findViewById(R.id.set_calendar_day_button);
+        letsTryButton = findViewById(R.id.try_to_use_button);
+        letsTryButton.setOnClickListener(new LetsTryButtonBehaviour());
 
-        View any_view = findViewById(R.id.set_calendar_day_button);
-
-
-
-        mSendRequestButton.setOnClickListener(new RequestButtonOnClick());
-        mSetCalendarDateButton.setOnClickListener(new DateCalendarButtonOnClick());
     }
-}
-
-class RequestButtonOnClick implements View.OnClickListener {
 
     @Override
-    public void onClick(View view) {
-        Toast toast = Toast.makeText(view.getContext(), R.string.send_status, Toast.LENGTH_LONG);
-        toast.show();
+    protected void onStart() {
+        super.onStart();
+        System.out.println("STARTED");
     }
-}
 
-class DateCalendarButtonOnClick implements View.OnClickListener {
     @Override
-    public void onClick(View view) {
-        Toast toast = Toast.makeText(view.getContext(), R.string.date_is_set, Toast.LENGTH_LONG);
-        toast.show();
+    protected void onResume() {
+        super.onResume();
+        System.out.println("RESUMED");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        System.out.println("PAUSED");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        System.out.println("STOPPED");
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        System.out.println("RESTARTED");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        System.out.println("DESTROYED");
+    }
+
+    class LetsTryButtonBehaviour implements View.OnClickListener {
+
+        @Override
+        public void onClick(View view) {
+            Intent simpleIntent = new Intent(MainActivity.this, EditingActivity.class);
+            startActivity(simpleIntent);
+        }
     }
 }
 

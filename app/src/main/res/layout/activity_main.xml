@@ -6,30 +6,21 @@
     android:orientation="vertical">
 
     <TextView
+        android:id="@+id/start_screen_text_view"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:padding="24dp"
-        android:text="@string/app_name">
+        android:gravity="center"
+        android:lineHeight="30dp"
+        android:textSize="23dp"
+        android:text="@string/start_screen_message">
     </TextView>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <Button
-            android:id="@+id/send_request_button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/send_request">
-        </Button>
-
-        <Button
-            android:id="@+id/set_calendar_day_button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/set_date">
-        </Button>
-    </LinearLayout>
+    <Button
+        android:id="@+id/try_to_use_button"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="50dp"
+        android:text="@string/start_screen_button_message">
+    </Button>
 
 </LinearLayout>
