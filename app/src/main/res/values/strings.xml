@@ -1,18 +1,26 @@
 <resources>
-    <string name="app_name">MonManApp</string>
-    <string name="send_request">Отправить запрос на сервер</string>
-    <string name="set_date">Установить календарное число \n (dd/mm/yyyy)</string>
-    <string name="send_status">Запрос отправлен!</string>
-    <string name="date_is_set">Дата установлена</string>
-    <string name="start_screen_message">Hello there, it is MonManApp.\nSimple application for managing your money</string>
-    <string name="start_screen_button_message">Try to use</string>
-    <string name="title_activity_earnings_editing">EarningsEditingActivity</string>
 
-    <string name="name_hint_message">Название</string>
-    <string name="type_hint_message">Тип</string>
-    <string name="cost_hint_message">Стоимость</string>
-    <string name="count_hint_message">Количество</string>
-    <string name="day_hint_message">День календаря</string>
-    <string name="payment_type_hint_message">Тип оплаты</string>
+    <!-- MainActivity -->
+    <string name="main_activity_app_name">MonManApp</string>
+    <string name="main_activity_start_screen_message">Hello there, it is MonManApp.\nSimple application for managing your money</string>
+    <string name="main_activity_start_screen_button_message">Try to use</string>
+
+    <!-- SettingActivity -->
+
+    <string name="setting_activity_switcher_text">Доходы - Расходы</string>
+    <string name="setting_activity_request_status">Запрос отправлен!</string>
+    <string name="setting_activity_name_hint_message">Название</string>
+    <string name="setting_activity_type_hint_message">Тип</string>
+    <string name="setting_activity_cost_hint_message">Стоимость</string>
+    <string name="setting_activity_count_hint_message">Количество</string>
+    <string name="setting_activity_day_hint_message">День календаря</string>
+    <string name="setting_activity_payment_type_hint_message">Тип оплаты</string>
+    <string name="setting_activity_set_button_text"> -> </string>
+
+
+    <!-- ActionChoosingActivity -->
+    <string name="action_choosing_activity_watching_and_deleting_button_message_text">Удалить записи</string>
+    <string name="action_choosing_activity_setting_activity_button_message_text">Внести записи</string>
+    <string name="action_choosing_activity_button_message"> -> </string>
 
 </resources>

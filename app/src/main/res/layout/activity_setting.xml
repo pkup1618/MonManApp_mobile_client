@@ -6,72 +6,72 @@
     android:orientation="vertical">
 
     <Switch
-        android:id="@+id/earnings_or_purchases_switch"
+        android:id="@+id/setting_activity_earnings_or_purchases_switch"
+        android:layout_height="50dp"
         android:layout_width="200dp"
-        android:layout_height="100dp"
-        android:text="Доходы - Расходы"
+        android:text="@string/setting_activity_switcher_text"
         android:gravity="center">
     </Switch>
 
     <EditText
-        android:id="@+id/name_editText"
-        android:hint="@string/name_hint_message"
+        android:id="@+id/setting_activity_name_editText"
+        android:hint="@string/setting_activity_name_hint_message"
         android:inputType="textCapWords"
         android:textSize="15dp"
-        android:layout_height="80dp"
+        android:layout_height="50dp"
         android:layout_width="200dp"
         android:gravity="center">
     </EditText>
     <EditText
-        android:id="@+id/type_editText"
+        android:id="@+id/setting_activity_type_editText"
         android:textSize="15dp"
-        android:hint="@string/type_hint_message"
+        android:hint="@string/setting_activity_type_hint_message"
         android:inputType="textCapWords"
-        android:layout_height="80dp"
+        android:layout_height="50dp"
         android:layout_width="200dp"
         android:gravity="center">
     </EditText>
     <EditText
-        android:id="@+id/cost_editText"
+        android:id="@+id/setting_activity_cost_editText"
         android:textSize="15dp"
-        android:hint="@string/cost_hint_message"
+        android:hint="@string/setting_activity_cost_hint_message"
         android:inputType="numberDecimal"
-        android:layout_height="80dp"
+        android:layout_height="50dp"
         android:layout_width="200dp"
         android:gravity="center">
     </EditText>
     <EditText
-        android:id="@+id/count_editText"
+        android:id="@+id/setting_activity_count_editText"
         android:textSize="15dp"
-        android:hint="@string/count_hint_message"
+        android:hint="@string/setting_activity_count_hint_message"
         android:inputType="number"
-        android:layout_height="80dp"
+        android:layout_height="50dp"
         android:layout_width="200dp"
         android:gravity="center">
     </EditText>
     <EditText
-        android:id="@+id/day_editText"
+        android:id="@+id/setting_activity_day_editText"
         android:textSize="15dp"
-        android:hint="@string/day_hint_message"
+        android:hint="@string/setting_activity_day_hint_message"
         android:inputType="date"
-        android:layout_height="80dp"
+        android:layout_height="50dp"
         android:layout_width="200dp"
         android:gravity="center">
     </EditText>
     <EditText
-        android:id="@+id/payment_type_editText"
+        android:id="@+id/setting_activity_payment_type_editText"
         android:textSize="15dp"
-        android:hint="@string/payment_type_hint_message"
+        android:hint="@string/setting_activity_payment_type_hint_message"
         android:inputType="textCapCharacters"
-        android:layout_height="80dp"
+        android:layout_height="50dp"
         android:layout_width="200dp"
         android:gravity="center">
     </EditText>
     <Button
-        android:id="@+id/set_button"
-        android:layout_width="100dp"
+        android:id="@+id/setting_activity_set_button"
         android:layout_height="50dp"
-        android:text="SEND">
+        android:layout_width="200dp"
+        android:text="@string/setting_activity_set_button_text">
     </Button>
 
 </LinearLayout>
