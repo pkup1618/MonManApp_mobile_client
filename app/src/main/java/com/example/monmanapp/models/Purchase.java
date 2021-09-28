@@ -10,19 +10,17 @@ public class Purchase {
     }
 
 
-    //Все строковые, потому что фактически нужны только для вывода на экран
+    String purchaseName;
+    public String getPurchaseName() { return purchaseName; }
+    public void setPurchaseName(String purchaseName) { this.purchaseName = purchaseName; }
 
-    String name;
-    public String getName() { return name; }
-    public void setName(String name) { this.name = name; }
+    String purchaseType;
+    public String getPurchaseType() { return purchaseType; }
+    public void setPurchaseType(String purchaseType) { this.purchaseType = purchaseType; }
 
-    String type;
-    public String getType() { return type; }
-    public void setType(String type) { this.type = type; }
-
-    String cost;
-    public String getCost() { return cost; }
-    public void setCost(String cost) { this.cost = cost; }
+    String purchaseCost;
+    public String getPurchaseCost() { return purchaseCost; }
+    public void setPurchaseCost(String purchaseCost) { this.purchaseCost = purchaseCost; }
 
     String count;
     public String getCount() { return count; }
@@ -35,6 +33,10 @@ public class Purchase {
     Integer dbId;
     public Integer getDbId() { return dbId; }
     public void setDbId(Integer dbId) { this.dbId = dbId; }
+
+    String paymentType;
+    public String getPaymentType() { return paymentType; }
+    public void setPaymentType(String paymentType) { this.paymentType = paymentType; }
 
 
     public Purchase() {

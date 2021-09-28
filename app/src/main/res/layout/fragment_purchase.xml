@@ -58,12 +58,18 @@
             android:textAlignment="center"
             android:text="E">
         </TextView>
-        <Button
-            android:id="@+id/purchase_fragment_delete_button"
-            android:layout_height="wrap_content"
+        <TextView
+            android:id="@+id/purchase_fragment_payment_type"
             android:layout_width="match_parent"
-            android:layout_weight="1">
-        </Button>
-
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAlignment="center">
+        </TextView>
     </LinearLayout>
+    <Button
+        android:id="@+id/purchase_fragment_delete_button"
+        android:layout_height="50dp"
+        android:layout_width="match_parent"
+        android:layout_weight="1">
+    </Button>
 </GridLayout>

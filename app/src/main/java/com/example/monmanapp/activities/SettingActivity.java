@@ -76,18 +76,18 @@ public class SettingActivity extends AppCompatActivity {
 
         try {
             if (earningsOrPurchaseSwitch.isChecked()) {
-                jsonObject.put("purchase-name", nameEditText.getText());
-                jsonObject.put("purchase-type", typeEditText.getText());
-                jsonObject.put("purchase-cost", Double.valueOf(String.valueOf(costEditText.getText())));
+                jsonObject.put("purchase_name", nameEditText.getText());
+                jsonObject.put("purchase_type", typeEditText.getText());
+                jsonObject.put("purchase_cost", Double.valueOf(String.valueOf(costEditText.getText())));
             }
             else {
-                jsonObject.put("earning-name", nameEditText.getText());
-                jsonObject.put("earning-type", typeEditText.getText());
-                jsonObject.put("earning-cost", Double.valueOf(String.valueOf(costEditText.getText())));
+                jsonObject.put("earning_name", nameEditText.getText());
+                jsonObject.put("earning_type", typeEditText.getText());
+                jsonObject.put("earning_cost", Double.valueOf(String.valueOf(costEditText.getText())));
             }
             jsonObject.put("count", Integer.valueOf(String.valueOf(countEditText.getText())));
             jsonObject.put("day", dayEditText.getText());
-            jsonObject.put("payment-type", paymentTypeEditText.getText());
+            jsonObject.put("payment_type", paymentTypeEditText.getText());
         }
         catch (JSONException e) {
             //todo а как нормально?
@@ -135,7 +135,6 @@ public class SettingActivity extends AppCompatActivity {
 
                 httpURLConnection = (HttpURLConnection) url.openConnection();
                 httpURLConnection.setRequestProperty("Content-Type", "application/json");
-                httpURLConnection.setFixedLengthStreamingMode(body.length());
                 httpURLConnection.setReadTimeout(10000);
                 httpURLConnection.setConnectTimeout(15000);
                 httpURLConnection.setRequestMethod("POST");

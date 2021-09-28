@@ -1,5 +1,11 @@
 package com.example.monmanapp.models;
 
+import com.example.monmanapp.web_layer.ServerConnectivity;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
@@ -25,20 +31,8 @@ public class PurchasesContainer {
     private PurchasesContainer() {
 
         listOfPurchases = new ArrayList<Purchase>();
-
-        //text objects
-
-        for (Integer i = 0; i < 20; i++) {
-            Purchase purchase = new Purchase();
-            purchase.setName(i.toString());
-            purchase.setType(i.toString());
-            purchase.setCost(i.toString());
-            purchase.setCount(i.toString());
-            purchase.setDay(i.toString());
-            purchase.setDbId(i);
-            listOfPurchases.add(purchase);
-        }
     }
+
 
     private List<Purchase> listOfPurchases;
     public List<Purchase> getListOfRecords() {
@@ -55,4 +49,35 @@ public class PurchasesContainer {
         return null;
     }
 
+
+    public void updateListOfPurchases(String date) {
+
+        List<Purchase> buffer = new ArrayList<Purchase>();
+        ServerConnectivity serverConnectivity = ServerConnectivity.getInstance();
+        JSONArray jsonArrayPurchases = serverConnectivity.makeJsonRequest(
+                        serverConnectivity.generateJsonFromDate(date),
+                        ServerConnectivity.GET_DAY_PURCHASES_URL);
+
+        JSONObject jsonObject;
+        for (int i = 0; true; i++) {
+            try {
+                jsonObject = jsonArrayPurchases.getJSONObject(i);
+                Purchase purchase = new Purchase();
+
+                purchase.setPurchaseName(jsonObject.getString("purchase_name"));
+                purchase.setPurchaseType(jsonObject.getString("purchase_type"));
+                purchase.setPurchaseCost(jsonObject.getString("purchase_cost"));
+                purchase.setCount(jsonObject.getString("count"));
+                purchase.setDay(jsonObject.getString("day"));
+                purchase.setPaymentType(jsonObject.getString("payment_type"));
+                purchase.setDbId(jsonObject.getInt("id"));
+
+                buffer.add(purchase);
+            }
+            catch (JSONException e) {
+                break;
+            }
+        }
+        listOfPurchases = buffer;
+    }
 }

@@ -12,7 +12,6 @@ import androidx.fragment.app.Fragment;
 import com.example.monmanapp.R;
 import com.example.monmanapp.models.Purchase;
 
-
 public class PurchaseFragment extends Fragment {
 
     private Purchase purchase;
@@ -21,6 +20,7 @@ public class PurchaseFragment extends Fragment {
     private TextView costText;
     private TextView countText;
     private TextView dayText;
+    private TextView paymentTypeText;
     private Button deleteButton;
 
     @Override
@@ -41,6 +41,7 @@ public class PurchaseFragment extends Fragment {
         costText = view.findViewById(R.id.purchase_fragment_purchase_cost);
         countText = view.findViewById(R.id.purchase_fragment_purchase_count);
         dayText = view.findViewById(R.id.purchase_fragment_purchase_day);
+        paymentTypeText = view.findViewById(R.id.purchase_fragment_payment_type);
         deleteButton = view.findViewById(R.id.purchase_fragment_delete_button);
 
 
